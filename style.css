@@ -1,0 +1,333 @@
+/* =====================================
+   ESTILOS GENERALES
+===================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --azul-oscuro: #102A43;
+    --azul: #1D5D83;
+    --celeste: #DCEEF7;
+    --dorado: #D5A84B;
+    --blanco: #FFFFFF;
+    --gris: #F3F6F9;
+    --texto: #334155;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #DCEEF7, #F3F6F9);
+    color: var(--texto);
+    padding: 40px 20px;
+}
+
+/* =====================================
+   CONTENEDOR PRINCIPAL
+===================================== */
+
+.cv {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    max-width: 1100px;
+    margin: auto;
+    background: var(--blanco);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 45px rgba(16, 42, 67, 0.18);
+}
+
+/* =====================================
+   PORTADA / COLUMNA IZQUIERDA
+===================================== */
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 33%;
+    background: linear-gradient(
+        180deg,
+        #102A43,
+        #1D5D83
+    );
+    color: white;
+    padding: 35px 28px;
+}
+
+/* FOTOGRAFÍA */
+
+.foto {
+    width: 155px;
+    height: 155px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid var(--dorado);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* NOMBRE */
+
+.sidebar h1 {
+    font-size: 25px;
+    font-weight: 800;
+    text-align: center;
+    line-height: 1.4;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.titulo {
+    text-align: center;
+    color: #DCEEF7;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+/* SECCIONES LATERALES */
+
+.sidebar section {
+    margin-bottom: 28px;
+}
+
+.sidebar section h2 {
+    font-size: 16px;
+    color: var(--dorado);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid rgba(255,255,255,0.25);
+    padding-bottom: 9px;
+    margin-bottom: 15px;
+}
+
+.sidebar p {
+    font-size: 12px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+    overflow-wrap: anywhere;
+}
+
+.sidebar strong {
+    color: #DCEEF7;
+}
+
+.sidebar ul {
+    padding-left: 20px;
+}
+
+.sidebar li {
+    font-size: 12px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* =====================================
+   COLUMNA DERECHA
+===================================== */
+
+.contenido {
+    flex: 1;
+    padding: 50px 45px;
+    background: white;
+}
+
+/* SECCIONES */
+
+.contenido section {
+    margin-bottom: 35px;
+}
+
+/* TÍTULOS */
+
+.contenido h2 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 21px;
+    color: var(--azul-oscuro);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.contenido h2::before {
+    content: "";
+    width: 6px;
+    height: 30px;
+    background: var(--dorado);
+    border-radius: 5px;
+}
+
+.contenido h2::after {
+    content: "";
+    height: 2px;
+    background: var(--celeste);
+    flex: 1;
+}
+
+/* PÁRRAFOS */
+
+.contenido p {
+    font-size: 13px;
+    line-height: 1.9;
+    text-align: justify;
+    color: #526273;
+}
+
+/* SUBTÍTULOS */
+
+.contenido h3 {
+    font-size: 16px;
+    color: var(--azul);
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+/* =====================================
+   EXPERIENCIA LABORAL
+===================================== */
+
+.trabajo {
+    position: relative;
+    background: #F5F9FC;
+    border-left: 4px solid var(--azul);
+    padding: 18px 20px;
+    margin-bottom: 18px;
+    border-radius: 0 12px 12px 0;
+    transition: 0.3s;
+}
+
+.trabajo:hover {
+    transform: translateX(5px);
+    background: #EAF4F9;
+    box-shadow: 0 5px 15px rgba(16,42,67,0.08);
+}
+
+.trabajo h3 {
+    color: var(--azul-oscuro);
+    font-size: 15px;
+}
+
+.fecha {
+    color: var(--dorado) !important;
+    font-size: 11px !important;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.trabajo ul {
+    padding-left: 20px;
+    margin-top: 8px;
+}
+
+.trabajo li {
+    font-size: 12px;
+    line-height: 1.8;
+    color: #526273;
+    margin-bottom: 4px;
+}
+
+/* =====================================
+   FORMACIÓN ACADÉMICA
+===================================== */
+
+.contenido section:nth-child(2) {
+    background: #F5F9FC;
+    padding: 20px;
+    border-radius: 12px;
+    border-bottom: 3px solid var(--dorado);
+}
+
+/* =====================================
+   EFECTOS Y DETALLES
+===================================== */
+
+.sidebar section,
+.contenido section {
+    transition: all 0.3s ease;
+}
+
+::selection {
+    background: var(--dorado);
+    color: white;
+}
+
+/* =====================================
+   DISEÑO RESPONSIVO
+===================================== */
+
+@media screen and (max-width: 768px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .cv {
+        flex-direction: column;
+        border-radius: 12px;
+    }
+
+    .sidebar {
+        flex: 1;
+        padding: 30px 25px;
+    }
+
+    .contenido {
+        padding: 30px 22px;
+    }
+
+    .sidebar h1 {
+        font-size: 23px;
+    }
+
+    .contenido h2 {
+        font-size: 18px;
+    }
+
+    .foto {
+        width: 135px;
+        height: 135px;
+    }
+}
+
+/* =====================================
+   IMPRESIÓN
+===================================== */
+
+@media print {
+
+    @page {
+        size: A4;
+        margin: 10mm;
+    }
+
+    body {
+        padding: 0;
+        background: white;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+    .cv {
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .trabajo:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}
